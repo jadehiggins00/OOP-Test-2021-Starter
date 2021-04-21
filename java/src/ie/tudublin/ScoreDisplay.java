@@ -44,7 +44,7 @@ public class ScoreDisplay extends PApplet {
 
 		for (String ss : str) {
 			Note n = new Note(ss);
-
+			println(n);
 		} // end loop
 
 	}// end method
