@@ -45,6 +45,7 @@ public class Note {
     // cosntructor created for the note object - constructor chaining
 
     public Note(String ss) {
+       
     }
 
     // to string method
