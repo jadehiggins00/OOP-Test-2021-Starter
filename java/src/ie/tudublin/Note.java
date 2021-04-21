@@ -1,5 +1,7 @@
 package ie.tudublin;
 
+import processing.data.TableRow;
+
 public class Note {
 
     private String note;
@@ -34,7 +36,20 @@ public class Note {
         this.name = name;
     }//end contructor
 
+
+    // cosntructor created for the note object - constructor chaining
+    public Note(TableRow row) {
+        this(row.getString("Note"), row.getInt("Duration"), row.getString("Name"));
+    }//end contructor
+
+    // to string method
+    @Override
+    public String toString() {
+        return "Note [duration=" + duration + ", name=" + name + ", note=" + note + "]";
+    }
+
     
+
 
     
     
