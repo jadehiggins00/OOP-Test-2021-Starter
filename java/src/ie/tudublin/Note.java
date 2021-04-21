@@ -4,16 +4,16 @@ import processing.data.TableRow;
 
 public class Note {
 
-    private String note;
+    private char note;
     private int duration;
     
 
 
     // getters and setters
-    public String getNote() {
+    public char getNote() {
         return note;
     }
-    public void setNote(String note) {
+    public void setNote(char note) {
         this.note = note;
     }
     public int getDuration() {
@@ -25,7 +25,7 @@ public class Note {
   
 
     //contructor
-    public Note(String note, int duration) {
+    public Note(char note, int duration) {
         this.note = note;
         this.duration = duration;
         
@@ -34,7 +34,7 @@ public class Note {
 
     // cosntructor created for the note object - constructor chaining
     public Note(TableRow row) {
-        this(row.getString("Note"), row.getInt("Duration"));
+        // this(row.getCharacter("Note"), row.getInt("Duration"));
     }//end contructor
 
     // to string method
