@@ -6,7 +6,7 @@ public class Note {
 
     private String note;
     private int duration;
-    private String name;
+    
 
 
     // getters and setters
@@ -22,30 +22,25 @@ public class Note {
     public void setDuration(int duration) {
         this.duration = duration;
     }
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
+  
 
     //contructor
-    public Note(String note, int duration, String name) {
+    public Note(String note, int duration) {
         this.note = note;
         this.duration = duration;
-        this.name = name;
+        
     }//end contructor
 
 
     // cosntructor created for the note object - constructor chaining
     public Note(TableRow row) {
-        this(row.getString("Note"), row.getInt("Duration"), row.getString("Name"));
+        this(row.getString("Note"), row.getInt("Duration"));
     }//end contructor
 
     // to string method
     @Override
     public String toString() {
-        return "Note [duration=" + duration + ", name=" + name + ", note=" + note + "]";
+        return "Note [duration=" + duration + ",  note=" + note + "]";
     }
 
     

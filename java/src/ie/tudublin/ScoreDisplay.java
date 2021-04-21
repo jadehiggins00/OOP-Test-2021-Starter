@@ -29,18 +29,26 @@ public class ScoreDisplay extends PApplet
 	// loadscore populates the arraylist from the contents of the csv file
 	public void loadScore(){
 
-		Table s = loadTable("score.csv", "header");
+		Table s = loadTable("score2.csv", "header");
 		for(TableRow row:s.rows()){
 			
 			Note note = new Note(row);
 			notes.add(note);
-		}
-		
+		}//end loop
+	
+	}//end method
 
+	// printscores iterates over the array list and prints the score
+	public void printScores(){
+		for(Note n:notes){
+			println(n);
+		}//end loop
 	}//end method
 
 	public void setup() 
 	{
+		loadScore();
+		printScores();
 		
 	}
 
