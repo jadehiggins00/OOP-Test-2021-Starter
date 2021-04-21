@@ -10,8 +10,8 @@ import processing.data.TableRow;
 
 public class ScoreDisplay extends PApplet
 {
-	//String score = "DEFGABcd";
-	String score = "D2E2F2G2A2B2c2d2";
+	String score = "DEFGABcd";
+	//String score = "D2E2F2G2A2B2c2d2";
 	//String score = "DEF2F2F2EFA2A2B2AFD2E2D2D2D2";
 
 	// array lisr for holding instances of the note class
@@ -46,19 +46,32 @@ public class ScoreDisplay extends PApplet
 		// if()
 		
 		
-		List<String> myList = new ArrayList<String>(Arrays.asList(score.split("2")));
-		for(String ss :myList){
-			System.out.println(ss);
-		}
+		//List<String> myList = new ArrayList<String>(Arrays.asList(score.split("")));
+		String[] str =  score.split("");
+	
+		for(String ss :str){
+			Note n = new Note(ss);
+			notes.add(n);
+			
+		}//end loop
 
 	
 	}//end method
 
 	// printscores iterates over the array list and prints the score
 	public void printScores(){
-		// for(Note n:notes){
-		// 	println(n);
-		// }//end loop
+		int one = 1;
+		int two = 2;
+		boolean check1 = Character.isDigit(one);
+
+
+
+		for(Note n:notes){
+			//notes.add("2");
+			println(n);
+		}//end loop
+
+
 	}//end method
 
 	public void setup() 
